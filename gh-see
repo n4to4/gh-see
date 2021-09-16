@@ -2,7 +2,7 @@
 set -e
 
 repo="n4to4/gh-see"
-tag="v0.1.0"
+tag="v0.3.0"
 
 extensionPath="$(dirname "$0")"
 arch="$(uname -m)"
