@@ -2,7 +2,7 @@
 set -e
 
 repo="n4to4/gh-see"
-tag="v0.3.0"
+tag="v0.3.1"
 
 extensionPath="$(dirname "$0")"
 arch="$(uname -m)"
@@ -20,6 +20,8 @@ if uname -a | grep Msys > /dev/null; then
 elif uname -a | grep Darwin > /dev/null; then
   if [ $arch = "x86_64" ]; then
     exe="darwin-x86_64-${tag}"
+  elif [ $arch = "arm64" ]; then
+    exe="darwin-arm64-${tag}"
   fi
 elif uname -a | grep Linux > /dev/null; then
   if [ $arch = "x86_64" ]; then
